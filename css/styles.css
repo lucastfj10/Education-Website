@@ -19,7 +19,7 @@
     --color-black: #000;
     --color-bg: #1f2641;
     --color-bg1: #2e3267;
-    --color-bg2 : #424890;
+    --color-bg2: #424890;
 
     --container-width-lg: 76%;
     --container-width-md: 90%;
@@ -53,7 +53,11 @@ section h2 {
     margin-bottom: 4rem;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     line-height: 1.2;
 }
 
@@ -83,7 +87,7 @@ img {
     display: inline-block;
     background: var(--color-white);
     color: var(--color-black);
-    padding: 1rem 2rem ;
+    padding: 1rem 2rem;
     border: 1px solid transparent;
     font-weight: 500;
     transition: var(--transition);
@@ -187,7 +191,7 @@ header {
     margin: 1rem 0 3rem;
 }
 
-.categories_right{
+.categories_right {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
@@ -234,14 +238,15 @@ header {
 .category p {
     font-size: 0.85rem;
 }
+
 /* ============= POPULAR COURSES ===========*/
 .courses {
     margin-top: 10rem;
 }
 
-.courses_container{
+.courses_container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -265,6 +270,7 @@ header {
     margin: 1.2rem 0 2rem;
     font-size: 0.9rem;
 }
+
 /* ============= FAQS ===========*/
 .faqs {
     background: var(--color-bg1);
@@ -305,6 +311,7 @@ header {
 .faq.open p {
     display: block;
 }
+
 /* ============= TESTIMONIAL ===========*/
 .testimonials_container {
     overflow-x: hidden;
@@ -339,13 +346,11 @@ header {
 .testimonial_body::before {
     content: "";
     display: block;
-    background: linear-gradient(
-        135deg, 
-        transparent, 
-        var(--color-primary), 
-        var(--color-primary),
-        var(--color-primary)
-    );
+    background: linear-gradient(135deg,
+            transparent,
+            var(--color-primary),
+            var(--color-primary),
+            var(--color-primary));
     width: 3rem;
     height: 3rem;
     position: absolute;
@@ -353,6 +358,7 @@ header {
     top: -1.5rem;
     transform: rotate(45deg);
 }
+
 /* ============= FOOTER ===========*/
 footer {
     background: var(--color-bg);
@@ -366,7 +372,7 @@ footer {
     gap: 5rem;
 }
 
-.footer_container > div h4 {
+.footer_container>div h4 {
     margin-bottom: 1.2rem;
 }
 
@@ -378,7 +384,7 @@ footer ul li {
     margin-bottom: 0.7rem;
 }
 
-footer ul li a:hover{
+footer ul li a:hover {
     text-decoration: underline;
 }
 
@@ -393,8 +399,9 @@ footer ul li a:hover{
     text-align: center;
     margin-top: 4rem;
     padding: 1.2rem 0;
-    border-top: 1px solid  var(--color-bg2);
+    border-top: 1px solid var(--color-bg2);
 }
+
 /* ============= MEDIA QUERIES (TABLETS) ===========*/
 @media screen and (max-width: 1024px) {
     .container {
@@ -418,21 +425,212 @@ footer ul li a:hover{
 
     }
 
-/* ============= NAVBAR ===========*/
-nav button {
-    display: inline-block;
-    background: transparent;
-    font-size: 1.8rem;
-    color: var(--color-white);
-    cursor: pointer;
+    /* ============= NAVBAR ===========*/
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+
+    nav button#close-menu-btn {
+        display: none;
+    }
+
+    .nav_menu {
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    .nav_menu li {
+        width: 100%;
+        height: 5.8rem;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+
+    .nav_menu li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .nav_menu li:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    .nav_menu li:nth-child(4) {
+        animation-delay: 600ms;
+    }
+
+    @keyframes animateNavItems {
+        0% {
+            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+        }
+
+        100% {
+            transform: rotateZ(0) rotateX(0) scale(1);
+            opacity: 1;
+        }
+    }
+
+    .nav_menu li a {
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .nav_menu li a:hover {
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+
+    /* ============= HEADER ===========*/
+    header {
+        height: 70vh;
+        margin-bottom: 4rem;
+    }
+
+    .header_container {
+        gap: 0;
+        padding-bottom: 3rem;
+    }
+
+    /* ============= CATEGORIAS ===========*/
+    .categories {
+        height: auto;
+    }
+
+    .categories_container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .categories_left {
+        margin-right: 0;
+    }
+
+    /* ============= CURSOS POPULARES ===========*/
+    .courses {
+        margin-top: 0;
+    }
+
+    .courses_container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ============= PERGUNTAS FREQUENTES  ===========*/
+    .faqs_container {
+        grid-template-columns: 1fr;
+    }
+
+    .faq {
+        padding: 1.5rem;
+    }
+
+    /* ============= FOOTER ===========*/
+    .footer_container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-nav button#close-menu-btn {
-    display: none;
+/* ============= MEDIA QUERIES (PHONES) ===========*/
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    /* ============= NAVBAR ===========*/
+    .nav_menu {
+        right: 3%;
+    }
+    /* ============= HEADER ===========*/
+    header {
+        height: 100vh;
+    }
+
+    .header_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .header_left p {
+        margin-bottom: 1.3rem;
+    }
+
+    /* ============= CATEGORIAS ===========*/
+    .categories_right {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .category {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .category_icon {
+        margin-top: 4px;
+        display: inline-block;
+    }
+    /* ============= CURSOS POPULARES ===========*/
+    .courses_container {
+        grid-template-columns: 1fr;
+    }
+    /* ============= DEPOIMENTOS ===========*/
+    .testimonial_body {
+        padding: 1.2rem;
+    }
+    /* ============= FOOTER ===========*/
+    .footer_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer_1 p {
+        margin: 1rem auto;
+    }
+
+    .footer_socials {
+        justify-content: center;
+    }
 }
 
-.nav_menu {
+/* ============= MEDIA QUERIES (DESKTOPS) ===========*/
+@media screen and (max-width: 1920px) {
+    .container {
+        width: var(--container-width-lg);
+    }
+
+    /* ============= HEADER ===========*/
+    header {
+        height: 70vh;
+        margin-bottom: 4rem;
+    }
+
+    .header_container {
+        gap: 0;
+        padding-bottom: 3rem;
+    }
+
+    /* ============= CATEGORIAS ===========*/
+    .categories {
+        height: auto;
+    }
+
+    .courses {
+        margin-top: 0;
+    }
     
-}
 
 }
