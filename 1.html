@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Multipage Website</title>
+
+    <!--Icons Cout CDN-->
+    <link href="
+    https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css
+    " rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/18703f30c1.js" crossorigin="anonymous"></script>
+
+    <!--GOOGLE FONTS (MONTSERRAT)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <style>
+        .courses {
+            margin-top: 1rem;
+        }
+
+        body {
+            background-image: url(./images/bg-texture.png);
+        }
+
+
+        .top-container {
+            padding-left: 5rem;
+            padding-top: 1rem;
+            background: var(--color-bg1);
+            grid-template-columns: 100%;
+            height: 340px;
+        }
+
+        .top-container p {
+            padding-top: 2rem;
+        }
+
+        .star span a {
+            color: darkgoldenrod;
+        }
+
+        .star {
+            padding: 2rem 0;
+        }
+
+        .info-h1 {
+            padding: 2rem 0;
+        }
+
+        .borda {
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .info-h2 {
+            display: inline-flex;
+            padding-left: 2rem;
+        }
+
+        .info-curso {
+            background: var(--color-bg);
+            height: 340px;
+        }
+
+        .img-curso {
+            display: grid;
+            grid-template-columns: 85%;
+            gap: 1.5rem;
+            position: absolute;
+            top: 14%;
+            left: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- INICIO NAVBAR -->
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html">
+                <h4>EGATOR</h4>
+            </a>
+            <ul class="nav_menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="courses.html">Cursos</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></i></button>
+        </div>
+    </nav>
+    <!-- FIM NAVBAR -->
+
+    <!--INICIO SECTION TOPO -->
+    <section class="">
+        <div class="container">
+            <div class="top-container">
+                <h3>TEORIA MUSICAL</h3>
+                <p>Nesta jornada, mergulharemos nas profundezas da linguagem musical<br>
+                    desvendando os segredos por trás da criação, estrutura e interpretação das composições.</p>
+                <!-- STAR -->
+                <div class="star">
+                    <span>4,4</span>
+                    <span><a href=""><i class="fa-solid fa-star" style="color: #f4e21a;"></i></a></span>
+                    <span><a href=""><i class="fa-solid fa-star" style="color: #f4e21a;"></i></a></span>
+                    <span><a href=""><i class="fa-solid fa-star" style="color: #f4e21a;"></i></a></span>
+                    <span><a href=""><i class="fa-solid fa-star" style="color: #f4e21a;"></i></a></span>
+                    <span><a href=""><i class="fa-solid fa-star-half-stroke" style="color: #f4e21a;"></i></a></span>
+                    <span>2.800 alunos</span>
+                </div>
+                <!-- STAR -->
+                <h5>Criado Por <a href="" style="text-decoration: underline;">Seu Nome</a> </h5>
+                <div class="info-h1">
+                    <span><i class="fa-solid fa-circle-exclamation"></i> Última atualização em 12/2022</span>
+                    <div class="info-h2">
+                        <span><i class="fa-solid fa-globe"></i> Português</span>
+                    </div>
+                </div>
+
+                <div class="img-curso">
+                    <img src="./images/course1.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="borda"></div>
+
+            <div class="container-1">
+                <div class="info-curso">
+                    <div class="aprender">
+                        <h3>O que você aprenderá</h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--INICIO SECTION TOPO -->
+
+
+
+
+    <!--INICIO RODAPÉ -->
+    <footer>
+        <div class="container footer_container">
+            <div class="footer_1">
+                <a href="index.html footer_logo">
+                    <h4>EGATOR</h4>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, officia.</p>
+            </div>
+
+            <div class="footer_2">
+                <h4>Departamentos</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="courses.html">Cursos</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_3">
+                <h4>Privacidade</h4>
+                <ul class="privacy">
+                    <li><a href="#">Política De Privacidade</a></li>
+                    <li><a href="#">Termos e Condições</a></li>
+                    <li><a href="#">Política De Reembolso</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_4">
+                <h4>Contato</h4>
+                <div>
+                    <p>+5500789825234</p>
+                    <p>seuemail@email.com</p>
+                </div>
+
+                <ul class="footer_socials">
+                    <li>
+                        <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-instagram-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="uil uil-linkedin-alt"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_copyright">
+            <small>Copyright &copy; Lucas Daniel </small>
+        </div>
+    </footer>
+    <!--FIM RODAPÉ -->
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
